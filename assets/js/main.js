@@ -54,7 +54,10 @@ botaoBarra.addEventListener('click', function () {
   if (isNaN(valor1) || isNaN(valor2)) {
     resultado.textContent = 'Digite dois números válidos.';
     
-  } else {
+  }else if(valor2 === 0){
+    resultado.textContent = "Não é possível fazer divisão por zero.";
+  } 
+  else {
     const quociente = Math.round((valor1 / valor2)*100)/100;
     resultado.textContent = `Resultado: ${quociente}`;
     
